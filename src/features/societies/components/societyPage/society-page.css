@@ -1,0 +1,18 @@
+section.society-page-section {
+  width: clamp(28rem, 100%, 80.6rem);
+  /* max-width: 80.6rem; */
+  width: clamp(28rem, 100%, 144rem);
+  padding: 0 1.8rem;
+}
+
+@media (min-width: 768px) {
+  section.society-page-section {
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 1030px) {
+  div.society-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+  }
+}

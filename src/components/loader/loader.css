@@ -1,0 +1,54 @@
+div.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-white-color);
+  text-align: center;
+}
+
+.loader-container svg {
+  width: 16.4rem;
+  height: 15.9rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container p {
+  font-family: Montserrat;
+  font-size: clamp(var(--m-big-font-title), 1.8vw, 4rem);
+  font-weight: var(--normal-fw);
+  line-height: 2.2rem;
+  letter-spacing: -0.40799999237060547px;
+  margin-top: 2.2rem;
+  color: var(--light-blue);
+}
+
+.loader-container span {
+  opacity: 0;
+  transition: opacity, var(--fast-transition) ease-in;
+  animation: fade-in 3s ease-in-out infinite;
+  animation-delay: calc(var(--dot) * 700ms);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
